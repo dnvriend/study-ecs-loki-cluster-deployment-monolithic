@@ -4,7 +4,7 @@ This deployment mode will cluster the read path, but not the write paths.
 
 ## Example queries
 
-```json
+```
 # find the loki cluster instances joining the cluster
 {container_name="loki", ecs_cluster="dnvriend-loki-all-cluster"} |~ "caller=(ringmanager.go|basic_lifecycler.go)" |= "instance"
 
